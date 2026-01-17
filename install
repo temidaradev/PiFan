@@ -1,15 +1,21 @@
 #!/bin/bash
 
+# Define version and architecture
+VERSION="3.5"
+ARCH="arm64"
+DEB_FILE="pifan_${VERSION}_${ARCH}.deb"
+# Update this URL to point to your actual release
+DOWNLOAD_URL="https://github.com/temidaradev/PiFan/releases/download/v${VERSION}/${DEB_FILE}"
+
 # Install dependencies
-pip install customtkinter packaging Pillow rpi-lgpio || exit 1
+sudo apt update
+sudo apt install -y python3-pil python3-packaging rpi.gpio-common wget
+
+# Download the .deb package
+wget "$DOWNLOAD_URL" || error "Failed to download $DEB_FILE"
 
 # Install the package
-pip install . || exit 1
+sudo dpkg -i "$DEB_FILE" || sudo apt-get -f install -y || error "Failed to install pifan"
 
-# Install desktop file
-sudo cp assets/pifan.desktop /usr/share/applications/ || exit 1
-
-# Install icon if it exists (ignoring failure if not present for now, but good to have)
-if [ -f "icon.png" ]; then
-    sudo cp icon.png /usr/share/icons/hicolor/64x64/apps/pifan.png
-fi
+# Clean up
+rm -f "$DEB_FILE"
