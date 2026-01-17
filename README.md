@@ -2,6 +2,9 @@
 
 **PiFan** is a modern GUI application designed specifically for the Raspberry Pi 5. It allows you to take full control of your active cooler's fan speed using hardware PWM (GPIO 45).
 
+<img width="510" height="586" alt="image" src="https://github.com/user-attachments/assets/5b7a31f5-5cdc-4ccd-92a8-f064ba33bf91" />
+
+
 ## Features
 
 - **Dual Modes**:
