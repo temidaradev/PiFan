@@ -1,0 +1,1 @@
+PiFan is a fan control utility for Raspberry Pi. It monitors CPU temperature and adjusts fan speed accordingly. It includes a GUI for monitoring and configuration.

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Install dependencies
+pip install customtkinter packaging Pillow rpi-lgpio || exit 1
+
+# Install the package
+pip install . || exit 1
+
+# Install desktop file
+sudo cp assets/pifan.desktop /usr/share/applications/ || exit 1
+
+# Install icon if it exists (ignoring failure if not present for now, but good to have)
+if [ -f "icon.png" ]; then
+    sudo cp icon.png /usr/share/icons/hicolor/64x64/apps/pifan.png
+fi

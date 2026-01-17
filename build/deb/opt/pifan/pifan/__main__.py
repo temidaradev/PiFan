@@ -43,7 +43,10 @@ class App(ctk.CTk):
         self.auto_mode = not self.auto_mode
         if self.auto_mode:
             self.ui.set_mode_auto()
-            # self.fan_controller.set_auto() # Removed, handled in loop
+            # Immediately apply auto speed to prevent fan staying at last manual speed
+            temp = self.fan_controller.get_temp()
+            speed = self.fan_controller.calculate_target_speed(temp)
+            self.fan_controller.set_speed(speed)
         else:
             # When switching to manual, default to current speed or 50?
             # Let's read slider value or default

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Uninstall package
+pip uninstall -y pifan || exit 1
+
+# Remove desktop file
+sudo rm -f /usr/share/applications/pifan.desktop
+
+# Remove icon
+sudo rm -f /usr/share/icons/hicolor/64x64/apps/pifan.png

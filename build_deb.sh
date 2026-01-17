@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="3.4"
+VERSION="3.5"
 PKG_NAME="pifan"
 ARCH="arm64"
 BUILD_DIR="build/deb"
