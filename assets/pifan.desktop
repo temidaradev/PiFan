@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PiFan 
+Comment=Control Fan Speed and Monitor Temp
+Exec=/usr/bin/pifan
+Icon=utilities-system-monitor
+Terminal=false
+Type=Application
+Categories=System;Monitor;HardwareSettings;Settings;
+Keywords=fan;cpu;temperature;pi;
+StartupNotify=true
