@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="3.3"
+VERSION="3.4"
 PKG_NAME="pifan"
 ARCH="arm64"
 BUILD_DIR="build/deb"
@@ -23,9 +23,9 @@ Version: $VERSION
 Section: utils
 Priority: optional
 Architecture: $ARCH
-Maintainer: Temi <temi@example.com>
+Maintainer: Temidaradev <temidaradev@proton.me>
 Description: Pi 5 Fan Controller
- A premium GUI for controlling the Raspberry Pi 5 Fan.
+ A GUI for controlling the Raspberry Pi 5 Fan.
 EOF
 
 # 2. Create Post-Install Script (Setup venv)

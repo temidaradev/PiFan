@@ -1,0 +1,9 @@
+#!/bin/bash
+export PYTHONPATH=$PYTHONPATH:/opt/pifan
+source /opt/pifan/venv/bin/activate
+# If not running as root, re-run self with sudo (which will be passwordless now)
+if [ "$EUID" -ne 0 ]; then
+    exec sudo $0 "$@"
+    exit
+fi
+python3 -m pifan

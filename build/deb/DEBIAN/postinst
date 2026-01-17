@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Setting up pifan environment..."
+# Create venv in /opt/pifan/venv
+python3 -m venv /opt/pifan/venv
+source /opt/pifan/venv/bin/activate
+pip install customtkinter packaging Pillow rpi-lgpio
+# Fix permissions
+chmod -R 755 /opt/pifan
+# Update desktop database if available
+if command -v update-desktop-database >/dev/null; then
+    update-desktop-database /usr/share/applications || true
+fi
+echo "Done."

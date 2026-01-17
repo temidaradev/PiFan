@@ -1,0 +1,8 @@
+Package: pifan
+Version: 3.4
+Section: utils
+Priority: optional
+Architecture: arm64
+Maintainer: Temidaradev <temidaradev@proton.me>
+Description: Pi 5 Fan Controller
+ A GUI for controlling the Raspberry Pi 5 Fan.
