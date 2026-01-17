@@ -1,18 +1,15 @@
 # PiFan - Raspberry Pi 5 Fan Controller
 
-**PiFan** is a premium, modern GUI application designed specifically for the Raspberry Pi 5. It allows you to take full control of your active cooler's fan speed using hardware PWM (GPIO 45).
+**PiFan** is a modern GUI application designed specifically for the Raspberry Pi 5. It allows you to take full control of your active cooler's fan speed using hardware PWM (GPIO 45).
 
 ## Features
 
-- **Dashboard Interface**: Beautiful, dark-themed UI showing real-time CPU temperature and fan status.
 - **Dual Modes**:
     - **Automatic**: Reads the system's kernel fan speed and displays it.
     - **Manual**: Take full control with a precision slider.
 - **Presets**: Quick-access buttons for **Silent** (30%), **Balanced** (60%), and **Max** (100%) profiles.
 - **Visual Feedback**: Temperature bar changes color (Green/Yellow/Red) based on thermal status.
-- **System Integration**: Installs as a native system app with a desktop icon.
-- **Secure**: Runs with necessary hardware privileges automatically (no password required after install).
-
+- 
 ## Installation
 
 ### Pre-built Package
